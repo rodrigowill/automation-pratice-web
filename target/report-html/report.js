@@ -39,18 +39,21 @@ formatter.match({
   "location": "LoginSteps.queEstouCadastradoNoEcommerce()"
 });
 formatter.result({
-  "duration": 16512111700,
+  "duration": 22398623200,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginSteps.tentoLogarNoSiteComUsuarioInvalido()"
+  "location": "LoginSteps.tentoLogarNoSiteComUsuarioCriado()"
 });
 formatter.result({
-  "duration": 29500,
+  "duration": 3110442800,
   "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "LoginSteps.oLoginEhRealizadoComSucesso()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 779844400,
+  "status": "passed"
 });
 });

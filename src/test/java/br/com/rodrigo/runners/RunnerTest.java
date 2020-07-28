@@ -15,6 +15,6 @@ import cucumber.api.junit.Cucumber;
 		snippets = SnippetType.CAMELCASE,
 		dryRun = false // não executa o codigo dos metodos quando 'true', apenas valida as associacoes
 		)
-public class RunnerTest {	
+public class RunnerTest {
 	
 }

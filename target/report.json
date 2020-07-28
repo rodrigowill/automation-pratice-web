@@ -18,7 +18,7 @@
         "steps": [
           {
             "result": {
-              "duration": 16512111700,
+              "duration": 22398623200,
               "status": "passed"
             },
             "line": 9,
@@ -30,23 +30,26 @@
           },
           {
             "result": {
-              "duration": 29500,
+              "duration": 3110442800,
               "status": "passed"
             },
             "line": 10,
             "name": "tento logar no site com o usuario criado",
             "match": {
-              "location": "LoginSteps.tentoLogarNoSiteComUsuarioInvalido()"
+              "location": "LoginSteps.tentoLogarNoSiteComUsuarioCriado()"
             },
             "keyword": "Quando "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 779844400,
+              "status": "passed"
             },
             "line": 11,
             "name": "o login eh realizado com sucesso",
-            "match": {},
+            "match": {
+              "location": "LoginSteps.oLoginEhRealizadoComSucesso()"
+            },
             "keyword": "Entao "
           }
         ]
