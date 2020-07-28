@@ -3,23 +3,23 @@ package br.com.rodrigo.steps;
 import static br.com.rodrigo.core.DriverFactory.getDriver;
 import static br.com.rodrigo.core.DriverFactory.killDriver;
 
-import br.com.rodrigo.core.BaseSteps;
+import br.com.rodrigo.core.Utils;
 import br.com.rodrigo.pages.CreateLoginPage;
 import br.com.rodrigo.pages.HomePage;
 import br.com.rodrigo.pages.LoginPage;
 import br.com.rodrigo.pages.MyAccountPage;
 import cucumber.api.java.pt.Dado;
-import cucumber.api.java.pt.Então;
+import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
 
-public class LoginSteps extends BaseSteps {
+public class LoginSteps {
 	
 	HomePage home = new HomePage();
 	LoginPage login = new LoginPage();
 	CreateLoginPage createLogin = new CreateLoginPage();
 	MyAccountPage myAccount = new MyAccountPage();
 	
-	String email = "fulano12@teste15.com";
+	String email;
 	String password = "123456789";
 	
 	@Dado("^que estou cadastrado no ecommerce$")
@@ -28,6 +28,8 @@ public class LoginSteps extends BaseSteps {
 		getDriver().get("http://automationpractice.com/index.php");
 		
 		home.clicarSignIn();
+		
+		email = Utils.getSaltString() + "@teste15.com.br";
 		
 		login.escreverEmailCriarConta(email);
 		login.clicarBotaoCreateAnAccount();
@@ -55,9 +57,41 @@ public class LoginSteps extends BaseSteps {
 		login.clicarSignIn();
 	}
 
-	@Então("^o login eh realizado com sucesso$")
+	@Entao("^o login eh realizado com sucesso$")
 	public void oLoginEhRealizadoComSucesso() throws Throwable {
-		myAccount.validaLoginComSucesso();
+		myAccount.validarLoginComSucesso();
+		killDriver();
+	}
+	
+	@Dado("^que estou na tela de login$")
+	public void queEstouNaTelaDeLogin() throws Throwable {
+		getDriver().get("http://automationpractice.com/index.php");
+		home.clicarSignIn();
+	}
+
+	@Quando("^tento logar no site com um e-mail invalido$")
+	public void tentoLogarNoSiteComUmEMailInvalido() throws Throwable {
+		login.escreverEmailAddress("fulano.com.br");
+		login.escreverPassword(password);
+		login.clicarSignIn();
+	}
+
+	@Entao("^valido uma mensagem de e-mail invalido$")
+	public void validoUmaMensagemDeEMailInvalido() throws Throwable {
+		login.validarMensageEmailInvalido();
+		killDriver();
+	}
+
+	@Quando("^tento logar sem preencher o e-mail$")
+	public void tentoLogarSemPreencherOEMail() throws Throwable {
+		login.escreverEmailAddress("");
+		login.escreverPassword(password);
+		login.clicarSignIn();
+	}
+
+	@Entao("^valido uma mensagem de e-mail obrigatorio$")
+	public void validoUmaMensagemDeEMailObrigatorio() throws Throwable {
+		login.validarMensageEmailObrigatorio();
 		killDriver();
 	}
 	

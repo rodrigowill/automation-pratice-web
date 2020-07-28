@@ -10,15 +10,15 @@
     "elements": [
       {
         "line": 8,
-        "name": "",
+        "name": "Login com sucesso",
         "description": "",
-        "id": "logar-no-ecommerce;",
+        "id": "logar-no-ecommerce;login-com-sucesso",
         "type": "scenario",
         "keyword": "Cenario",
         "steps": [
           {
             "result": {
-              "duration": 22398623200,
+              "duration": 21890749000,
               "status": "passed"
             },
             "line": 9,
@@ -30,7 +30,7 @@
           },
           {
             "result": {
-              "duration": 3110442800,
+              "duration": 2867461100,
               "status": "passed"
             },
             "line": 10,
@@ -42,13 +42,105 @@
           },
           {
             "result": {
-              "duration": 779844400,
+              "duration": 755383500,
               "status": "passed"
             },
             "line": 11,
             "name": "o login eh realizado com sucesso",
             "match": {
               "location": "LoginSteps.oLoginEhRealizadoComSucesso()"
+            },
+            "keyword": "Entao "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "Login invalido",
+        "description": "",
+        "id": "logar-no-ecommerce;login-invalido",
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 11902214300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "que estou na tela de login",
+            "match": {
+              "location": "LoginSteps.queEstouNaTelaDeLogin()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 2051168900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "tento logar no site com um e-mail invalido",
+            "match": {
+              "location": "LoginSteps.tentoLogarNoSiteComUmEMailInvalido()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 754251000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "valido uma mensagem de e-mail invalido",
+            "match": {
+              "location": "LoginSteps.validoUmaMensagemDeEMailInvalido()"
+            },
+            "keyword": "Entao "
+          }
+        ]
+      },
+      {
+        "line": 18,
+        "name": "Login em branco",
+        "description": "",
+        "id": "logar-no-ecommerce;login-em-branco",
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 12287572400,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "que estou na tela de login",
+            "match": {
+              "location": "LoginSteps.queEstouNaTelaDeLogin()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 1886935000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "tento logar sem preencher o e-mail",
+            "match": {
+              "location": "LoginSteps.tentoLogarSemPreencherOEMail()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 761556800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "valido uma mensagem de e-mail obrigatorio",
+            "match": {
+              "location": "LoginSteps.validoUmaMensagemDeEMailObrigatorio()"
             },
             "keyword": "Entao "
           }

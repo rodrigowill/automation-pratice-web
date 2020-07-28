@@ -7,7 +7,7 @@ import br.com.rodrigo.core.BasePage;
 
 public class MyAccountPage extends BasePage {
 
-	public void validaCadastroComSucesso() {
+	public void validarCadastroComSucesso() {
 		Assert.assertEquals("Fulano Silva", this.obterTextoPorNameClass("account"));
 	}
 
@@ -15,7 +15,7 @@ public class MyAccountPage extends BasePage {
 		this.clicarLink("Sign out");
 	}
 
-	public void validaLoginComSucesso() {
+	public void validarLoginComSucesso() {
 		Assert.assertEquals("MY ACCOUNT", this.obterTextoPorNameClass("page-heading"));		
 	}
 

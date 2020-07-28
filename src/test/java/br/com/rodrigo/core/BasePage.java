@@ -26,8 +26,14 @@ public class BasePage {
 		getDriver().findElement(By.linkText(link)).click();
 	}
 	
+	/******** Texto ********/	
+	
 	public String obterTextoPorNameClass(String class_campo) {
 		return getDriver().findElement(By.className(class_campo)).getText();
+	}
+	
+	public String obterTextoPorXpath(String elemento) {
+		return getDriver().findElement(By.xpath(elemento)).getText();
 	}
 	
 	/******** TextField e TextArea *********/
