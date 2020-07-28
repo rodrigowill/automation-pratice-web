@@ -39,21 +39,21 @@ formatter.match({
   "location": "LoginSteps.queEstouCadastradoNoEcommerce()"
 });
 formatter.result({
-  "duration": 21890749000,
+  "duration": 23517622900,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.tentoLogarNoSiteComUsuarioCriado()"
 });
 formatter.result({
-  "duration": 2867461100,
+  "duration": 4435619899,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.oLoginEhRealizadoComSucesso()"
 });
 formatter.result({
-  "duration": 755383500,
+  "duration": 735779401,
   "status": "passed"
 });
 formatter.scenario({
@@ -83,21 +83,21 @@ formatter.match({
   "location": "LoginSteps.queEstouNaTelaDeLogin()"
 });
 formatter.result({
-  "duration": 11902214300,
+  "duration": 11885611600,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.tentoLogarNoSiteComUmEMailInvalido()"
 });
 formatter.result({
-  "duration": 2051168900,
+  "duration": 2003364001,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.validoUmaMensagemDeEMailInvalido()"
 });
 formatter.result({
-  "duration": 754251000,
+  "duration": 1584637000,
   "status": "passed"
 });
 formatter.scenario({
@@ -127,21 +127,21 @@ formatter.match({
   "location": "LoginSteps.queEstouNaTelaDeLogin()"
 });
 formatter.result({
-  "duration": 12287572400,
+  "duration": 12550260400,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.tentoLogarSemPreencherOEMail()"
 });
 formatter.result({
-  "duration": 1886935000,
+  "duration": 1961867499,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.validoUmaMensagemDeEMailObrigatorio()"
 });
 formatter.result({
-  "duration": 761556800,
+  "duration": 735461801,
   "status": "passed"
 });
 });

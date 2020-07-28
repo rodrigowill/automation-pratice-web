@@ -19,4 +19,3 @@ Cenario: Login em branco
 	Dado que estou na tela de login
 	Quando tento logar sem preencher o e-mail
 	Entao valido uma mensagem de e-mail obrigatorio
-	
